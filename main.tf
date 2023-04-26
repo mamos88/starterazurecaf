@@ -48,7 +48,7 @@ module "enterprise_scale" {
     (var.root_id) = {
       display_name               = var.root_name
       parent_management_group_id = var.tenant_id
-      subscription_ids           = ["cc84fc44-a95d-4b20-9721-136e38331a8b"]
+      subscription_ids           = []
       archetype_config = {
         archetype_id   = "es_root"
         parameters     = {}
@@ -68,7 +68,7 @@ module "enterprise_scale" {
     "${var.root_id}-developer" = {
       display_name               = "${upper(var.root_id)} Developer"
       parent_management_group_id = var.root_id
-      subscription_ids           = ["cf3a6121-6782-4633-b27b-a4f8cdf18feb"]
+      subscription_ids           = []
       archetype_config = {
         archetype_id   = "default_empty"
         parameters     = {}
