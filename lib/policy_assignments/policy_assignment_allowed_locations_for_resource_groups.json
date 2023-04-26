@@ -1,0 +1,22 @@
+{
+    "name": "AllowedLocationsResGrps",
+    "type": "Microsoft.Authorization/policyAssignments",
+    "apiVersion": "2019-09-01",
+    "properties": {
+        "description": "This policy enables you to restrict the locations your organization can create resource groups in. Use to enforce your geo-compliance requirements.",
+        "displayName": "Allowed locations for resource groups",
+        "notScopes": [],
+        "parameters": {
+            "listOfAllowedLocations": {
+                "value": ["westus", "westus3"]
+            }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988",
+        "scope": "${current_scope_resource_id}",
+        "enforcementMode": "Default"
+    },
+    "location": "${default_location}",
+    "identity": {
+        "type": "SystemAssigned"
+    }
+}
