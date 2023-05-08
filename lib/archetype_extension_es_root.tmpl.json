@@ -1,8 +1,17 @@
 {
     "extend_es_root": {
-      "policy_assignments": [],
-      "policy_definitions": [],
-      "policy_set_definitions": [],
+      "policy_assignments": [
+        "AllowedLocationsResGrps",
+        "AllowedLocations",
+        "Enforce-Mandatory-Tags"
+      ],
+      "policy_definitions": [
+      "Enforce-RG-Tags",
+      "Enforce-Resource-Tags"
+    ],
+      "policy_set_definitions": [
+        "Enforce-Mandatory-Tags"
+      ],
       "role_definitions": [],
       "archetype_config": {
         "access_control": {

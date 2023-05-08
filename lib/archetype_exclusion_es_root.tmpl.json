@@ -1,6 +1,13 @@
 {
     "exclude_es_root": {
-      "policy_assignments": [],
+      "policy_assignments": [
+        "Deploy-VM-Monitoring",
+        "Deploy-MDFC-Config",
+        "Deploy-ASC-Monitoring",
+        "Deploy-AzActivity-Log",
+        "Deploy-Resource-Diag",
+        "Deploy-VMSS-Monitoring"
+      ],
       "policy_definitions": [],
       "policy_set_definitions": [],
       "role_definitions": [],
