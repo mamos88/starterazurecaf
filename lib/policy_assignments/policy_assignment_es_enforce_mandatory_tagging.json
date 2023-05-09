@@ -10,14 +10,17 @@
       "EnforceRGTags-Owner": {
         "Value": "Owner"
       },
-      "EnforceRGTags-Department": {
-        "Value": "Department"
-      },
       "EnforceResourceTags-Owner": {
         "Value": "Owner"
       },
       "EnforceResourceTags-Department": {
         "Value": "Department"
+      },
+      "EnforceRGTags-Department": {
+        "Value": "Department"
+      },
+      "EnforceResourceTags-Project": {
+        "Value": "Project"
       }
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mandatory-Tags",

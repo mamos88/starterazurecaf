@@ -7,7 +7,7 @@
         "displayName": "Resources must have mandatory tagging applied",
         "policyType": "Custom",
         "mode": "Indexed",
-        "description": "Enforce mandatory 'Owner' and 'Department' tags on Resources",
+        "description": "Enforce mandatory 'Owner', 'Department', 'Project' and other tags on Resources",
         "metadata": {
             "version": "1.0.0",
             "category": "Tags"
@@ -21,6 +21,10 @@
                     },
                     {
                         "field": "[concat('tags[', parameters('Department'), ']')]",
+                        "exists": "false"
+                    },
+                    {
+                        "field": "[concat('tags[', parameters('Project'), ']')]",
                         "exists": "false"
                     }
                     ]
@@ -42,6 +46,13 @@
                     "metadata": {
                         "displayName": "Department",
                         "description": "Specifies the Department that the resource belongs to"
+                    }
+                },
+                "Project": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "Project",
+                        "description": "Specifies the Project that the resource belongs to"
                     }
                 }
             }
