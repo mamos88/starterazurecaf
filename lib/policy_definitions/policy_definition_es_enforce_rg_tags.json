@@ -85,7 +85,8 @@
                     "displayName": "Environment",
                     "description": "Specifies the Environment that the Resource Group belongs to"
                 },
-                "defaultValue": "prod"
+                "defaultValue": "prod",
+                "allowedValues": ["prod", "dev"]
             }
         }
     }

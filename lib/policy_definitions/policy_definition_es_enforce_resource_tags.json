@@ -77,7 +77,8 @@
                         "displayName": "Environment",
                         "description": "Specifies the Environment that the resource belongs to"
                     },
-                    "defaultValue": "prod"
+                    "defaultValue": "prod",
+                    "allowedValues": ["prod", "dev"]
                 }
             }
         }

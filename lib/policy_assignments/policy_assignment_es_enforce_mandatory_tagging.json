@@ -32,10 +32,10 @@
         "Value": "Team"
       },
       "EnforceResourceTags-Environment": {
-        "Value": "Environment"
+        "Value": "prod"
       },
       "EnforceRGTags-Environment": {
-        "Value": "Environment"
+        "Value": "prod"
       }
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mandatory-Tags",
