@@ -74,11 +74,10 @@
                 "Environment": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Team",
-                        "description": "Specifies the Team that the resource belongs to"
+                        "displayName": "Environment",
+                        "description": "Specifies the Environment that the resource belongs to"
                     },
-                    "defaultValue": "prod",
-                    "allowedValues": ["prod", "qa", "dev", "staging", "other"]
+                    "defaultValue": "prod"
                 }
             }
         }

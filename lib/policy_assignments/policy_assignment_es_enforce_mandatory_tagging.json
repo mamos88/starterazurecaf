@@ -31,6 +31,9 @@
       "EnforceRGTags-Team": {
         "Value": "Team"
       },
+      "EnforceResourceTags-Environment": {
+        "Value": "Environment"
+      },
       "EnforceRGTags-Environment": {
         "Value": "Environment"
       }
