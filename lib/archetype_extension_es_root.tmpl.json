@@ -1,22 +1,22 @@
 {
-    "extend_es_root": {
-      "policy_assignments": [
-        "AllowedLocationsResGrps",
-        "AllowedLocations",
-        "Enforce-Mandatory-Tags"
-      ],
-      "policy_definitions": [
-      "Enforce-RG-Tags",
-      "Enforce-Resource-Tags",
-      "Deny-NIC-NSG"
+  "extend_es_root": {
+    "policy_assignments": [
+      "AllowedLocationsResGrps",
+      "AllowedLocations",
+      "Enforce-Mandatory-Tags"
     ],
-      "policy_set_definitions": [
-        "Enforce-Mandatory-Tags"
-      ],
-      "role_definitions": [],
-      "archetype_config": {
-        "access_control": {
-        }
+    "policy_definitions": [
+    "Enforce-RG-Tags",
+    "Enforce-Resource-Tags",
+    "Deny-NIC-NSG"
+  ],
+    "policy_set_definitions": [
+      "Enforce-Mandatory-Tags"
+    ],
+    "role_definitions": [],
+    "archetype_config": {
+      "access_control": {
       }
     }
   }
+}

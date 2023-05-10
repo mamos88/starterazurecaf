@@ -46,6 +46,43 @@
             "displayName": "Project",
             "description": "Specifies the Project that the resource belongs to"
           }
+      },
+      "EnforceRGTags-Project": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Project",
+            "description": "Specifies the Department that the Resource Group belongs to"
+          }
+      },
+      "EnforceResourceTags-Team": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Team",
+            "description": "Specifies the Team that the resource belongs to"
+          }
+      },
+      "EnforceRGTags-Team": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Team",
+            "description": "Specifies the Team that the Resource Group belongs to"
+          }
+      },
+      "EnforceResourceTags-Environment": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Environment",
+            "description": "Specifies the Environment that the resource belongs to"
+          },
+          "defaultValue": "prod"
+      },
+      "EnforceRGTags-Environment": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Environment",
+            "description": "Specifies the Environment that the Resource Group belongs to"
+          },
+          "defaultValue": "prod"
       }
     },
     "policyDefinitions": [
@@ -58,6 +95,15 @@
           },
           "Department": {
             "value": "[parameters('EnforceRGTags-Department')]"
+          },
+          "Project": {
+            "value": "[parameters('EnforceRGTags-Project')]"
+          },
+          "Team": {
+            "value": "[parameters('EnforceRGTags-Team')]"
+          },
+          "Environment": {
+            "value": "[parameters('EnforceRGTags-Environment')]"
           }
         },
         "groupNames": []
@@ -74,6 +120,12 @@
           },
           "Project": {
             "value": "[parameters('EnforceResourceTags-Project')]"
+          },
+          "Team": {
+            "value": "[parameters('EnforceResourceTags-Team')]"
+          },
+          "Environment": {
+            "value": "[parameters('EnforceResourceTags-Environment')]"
           }
         },
         "groupNames": []

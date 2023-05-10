@@ -28,6 +28,18 @@
                 {
                     "field": "[concat('tags[', parameters('Department'), ']')]",
                     "exists": "false"
+                },
+                {
+                    "field": "[concat('tags[', parameters('Project'), ']')]",
+                    "exists": "false"
+                },
+                {
+                    "field": "[concat('tags[', parameters('Team'), ']')]",
+                    "exists": "false"
+                },
+                {
+                    "field": "[concat('tags[', parameters('Environment'), ']')]",
+                    "exists": "false"
                 }
                 ]
             }
@@ -51,6 +63,30 @@
                     "displayName": "Department",
                     "description": "Specifies the Department that the Resource Group belongs to"
                 }
+            },
+            "Project": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Project",
+                    "description": "Specifies the Department that the Resource Group belongs to"
+                }
+            },
+            "Team": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Team",
+                    "description": "Specifies the Team that the Resource Group belongs to"
+                },
+                "defaultValue": "Unknown"
+            },
+            "Environment": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Environment",
+                    "description": "Specifies the Environment that the Resource Group belongs to"
+                },
+                "defaultValue": "prod",
+                "allowedValues": ["prod", "qa", "dev", "staging", "other"]
             }
         }
     }

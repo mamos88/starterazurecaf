@@ -26,6 +26,14 @@
                     {
                         "field": "[concat('tags[', parameters('Project'), ']')]",
                         "exists": "false"
+                    },
+                    {
+                        "field": "[concat('tags[', parameters('Team'), ']')]",
+                        "exists": "false"
+                    },
+                    {
+                        "field": "[concat('tags[', parameters('Environment'), ']')]",
+                        "exists": "false"
                     }
                     ]
             },
@@ -54,6 +62,23 @@
                         "displayName": "Project",
                         "description": "Specifies the Project that the resource belongs to"
                     }
+                },
+                "Team": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "Team",
+                        "description": "Specifies the Team that the resource belongs to"
+                    },
+                    "defaultValue": "Unknown"
+                },
+                "Environment": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "Team",
+                        "description": "Specifies the Team that the resource belongs to"
+                    },
+                    "defaultValue": "prod",
+                    "allowedValues": ["prod", "qa", "dev", "staging", "other"]
                 }
             }
         }

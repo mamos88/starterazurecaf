@@ -21,6 +21,18 @@
       },
       "EnforceResourceTags-Project": {
         "Value": "Project"
+      },
+      "EnforceRGTags-Project": {
+        "Value": "Project"
+      },
+      "EnforceResourceTags-Team": {
+        "Value": "Team"
+      },
+      "EnforceRGTags-Team": {
+        "Value": "Team"
+      },
+      "EnforceRGTags-Environment": {
+        "Value": "Environment"
       }
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mandatory-Tags",
