@@ -78,7 +78,7 @@
                         "description": "Specifies the Environment that the resource belongs to"
                     },
                     "defaultValue": "prod",
-                    "allowedValues": ["prod", "dev"]
+                    "allowedValues": ["prod", "dev", "qa", "staging", "other"]
                 }
             }
         }

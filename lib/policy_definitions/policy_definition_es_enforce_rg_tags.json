@@ -86,7 +86,7 @@
                     "description": "Specifies the Environment that the Resource Group belongs to"
                 },
                 "defaultValue": "prod",
-                "allowedValues": ["prod", "dev"]
+                "allowedValues": ["prod", "dev", "qa", "staging", "other"]
             }
         }
     }
