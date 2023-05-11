@@ -7,8 +7,7 @@
     ],
     "policy_definitions": [
     "Enforce-RG-Tags",
-    "Enforce-Resource-Tags",
-    "Deny-NIC-NSG"
+    "Enforce-Resource-Tags"
   ],
     "policy_set_definitions": [
       "Enforce-Mandatory-Tags"
