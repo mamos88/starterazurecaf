@@ -1,5 +1,5 @@
 {
-  "name": "Enforce-Mandatory-Tags",
+  "name": "Enforce-Mand-Tags-PA",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
@@ -36,9 +36,21 @@
       },
       "EnforceRGTags-Environment": {
         "Value": "prod"
+      },
+      "EnforceRGTags-OriginalRqCo": {
+        "Value": "Please Specify"
+      },
+      "EnforceResourceTags-OriginalRqCo": {
+        "Value": "Please Specify"
+      },
+      "EnforceRGTags-ManagedByTerraform": {
+        "Value": "Please Specify"
+      },
+      "EnforceResourceTags-ManagedByTerraform": {
+        "Value": "Please Specify"
       }
     },
-    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mandatory-Tags",
+    "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mand-Tags-PSD",
     "nonComplianceMessages": [
       {
         "message": "Mandatory tags {enforcementMode} be applied to Resources and Resource Groups."
