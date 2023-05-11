@@ -1,5 +1,5 @@
 {
-  "name": "Enforce-RG-Tags",
+  "name": "Enforce-RG-Tags-PA",
   "type": "Microsoft.Authorization/policyAssignments",
   "apiVersion": "2019-09-01",
   "properties": {
@@ -8,7 +8,7 @@
       "notScopes": [],
       "parameters": {
       } ,
-      "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-RG-Tags",
+      "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-RG-Tags-PD",
       "nonComplianceMessages": [
         {
           "message": "Mandatory tags {enforcementMode} be applied to Resource Groups."

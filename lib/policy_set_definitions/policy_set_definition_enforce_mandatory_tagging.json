@@ -1,5 +1,5 @@
 {
-  "name": "Enforce-Mandatory-Tags",
+  "name": "Enforce-Mand-Tags-PSD",
   "type": "Microsoft.Authorization/policySetDefinitions",
   "apiVersion": "2021-06-01",
   "scope": null,
@@ -83,12 +83,44 @@
             "description": "Specifies the Environment that the Resource Group belongs to"
           },
           "defaultValue": "prod"
+      },
+      "EnforceResourceTags-OriginalRqCo": {
+          "type": "String",
+          "metadata": {
+            "displayName": "OriginalRqCo",
+            "description": "Specifies the OriginalRqCo that the resource belongs to"
+          },
+          "defaultValue": "Please Specify"
+      },
+      "EnforceRGTags-OriginalRqCo": {
+          "type": "String",
+          "metadata": {
+            "displayName": "OriginalRqCo",
+            "description": "Specifies the OriginalRqCo that the Resource Group belongs to"
+          },
+          "defaultValue": "Please Specify"
+      },
+      "EnforceResourceTags-ManagedByTerraform": {
+          "type": "String",
+          "metadata": {
+            "displayName": "ManagedByTerraform",
+            "description": "Specifies the ManageByTerraform that the resource belongs to"
+          },
+          "defaultValue": "Please Specify"
+      },
+      "EnforceRGTags-ManagedByTerraform": {
+          "type": "String",
+          "metadata": {
+            "displayName": "ManagedByTerraform",
+            "description": "Specifies the ManageByTerraform that the Resource Group belongs to"
+          },
+          "defaultValue": "Please Specify"
       }
     },
     "policyDefinitions": [
       {
         "policyDefinitionReferenceId": "Resource groups must have mandatory tagging applied",
-        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-RG-Tags",
+        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-RG-Tags-PD",
         "parameters": {
           "Owner": {
             "value": "[parameters('EnforceRGTags-Owner')]"
@@ -104,13 +136,19 @@
           },
           "Environment": {
             "value": "[parameters('EnforceRGTags-Environment')]"
+          },
+          "OriginalRqCo": {
+            "value": "[parameters('EnforceRGTags-OriginalRqCo')]"
+          },
+          "ManagedByTerraform": {
+            "value": "[parameters('EnforceRGTags-ManagedByTerraform')]"
           }
         },
         "groupNames": []
       },
       {
         "policyDefinitionReferenceId": "Resources must have mandatory tagging applied",
-        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-Resource-Tags",
+        "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-Resource-Tags-PD",
         "parameters": {
           "Owner": {
             "value": "[parameters('EnforceResourceTags-Owner')]"
@@ -126,6 +164,12 @@
           },
           "Environment": {
             "value": "[parameters('EnforceResourceTags-Environment')]"
+          },
+          "OriginalRqCo": {
+            "value": "[parameters('EnforceResourceTags-OriginalRqCo')]"
+          },
+          "ManagedByTerraform": {
+            "value": "[parameters('EnforceResourceTags-ManagedByTerraform')]"
           }
         },
         "groupNames": []
