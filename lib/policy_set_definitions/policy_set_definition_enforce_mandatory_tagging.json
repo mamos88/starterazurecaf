@@ -73,16 +73,28 @@
           "metadata": {
             "displayName": "Environment",
             "description": "Specifies the Environment that the resource belongs to"
-          },
-          "defaultValue": "prod"
+          }
       },
       "EnforceRGTags-Environment": {
           "type": "String",
           "metadata": {
             "displayName": "Environment",
             "description": "Specifies the Environment that the Resource Group belongs to"
-          },
-          "defaultValue": "prod"
+          }
+      },
+      "EnforceResourceTags-CreatedOn": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedOn",
+            "description": "Specifies the CreatedOn date for the resource"
+          }
+      },
+      "EnforceRGTags-CreatedOn": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedOn",
+            "description": "Specifies the CreatedOn date for the resource"
+          }
       }
     },
     "policyDefinitions": [
@@ -104,6 +116,9 @@
           },
           "Environment": {
             "value": "[parameters('EnforceRGTags-Environment')]"
+          },
+          "CreatedOn": {
+            "value": "[parameters('EnforceRGTags-CreatedOn')]"
           }
         },
         "groupNames": []
@@ -126,6 +141,9 @@
           },
           "Environment": {
             "value": "[parameters('EnforceResourceTags-Environment')]"
+          },
+          "CreatedOn": {
+            "value": "[parameters('EnforceResourceTags-CreatedOn')]"
           }
         },
         "groupNames": []

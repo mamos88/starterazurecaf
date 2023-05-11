@@ -14,33 +14,99 @@
         },
         "policyRule": {
             "if": {
-                "anyof": [
-                    {
-                        "field": "[concat('tags[', parameters('Owner'), ']')]",
-                        "exists": "false"
-                    },
-                    {
-                        "field": "[concat('tags[', parameters('Department'), ']')]",
-                        "exists": "false"
-                    },
-                    {
-                        "field": "[concat('tags[', parameters('Project'), ']')]",
-                        "exists": "false"
-                    },
-                    {
-                        "field": "[concat('tags[', parameters('Team'), ']')]",
-                        "exists": "false"
-                    },
-                    {
-                        "field": "[concat('tags[', parameters('Environment'), ']')]",
-                        "exists": "false"
-                    }
-                    ]
+              "anyOf": [
+                {
+                  "field": "[concat('tags[', parameters('Owner'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('Owner'), ']')]",
+                    "equals": "[parameters('OwnerValue')]"
+                  }
+                },
+                {
+                  "field": "[concat('tags[', parameters('Department'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('Department'), ']')]",
+                    "equals": "[parameters('DepartmentValue')]"
+                  }
+                },
+                {
+                  "field": "[concat('tags[', parameters('Project'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('Project'), ']')]",
+                    "equals": "[parameters('ProjectValue')]"
+                  }
+                },
+                {
+                  "field": "[concat('tags[', parameters('Team'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('Team'), ']')]",
+                    "equals": "[parameters('TeamValue')]"
+                  }
+                },
+                {
+                  "field": "[concat('tags[', parameters('Environment'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('Environment'), ']')]",
+                    "equals": "[parameters('EnvironmentValue')]"
+                  }
+                },
+                {
+                  "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                  "exists": "false"
+                },
+                {
+                  "not": {
+                    "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                    "equals": "[parameters('CreatedOnValue')]"
+                  }
+                }
+              ]
             },
             "then": {
-                "effect": "deny"
+              "effect": "append",
+              "details": [
+                {
+                  "field": "[concat('tags[', parameters('Owner'), ']')]",
+                  "value": "[parameters('OwnerValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('Department'), ']')]",
+                  "value": "[parameters('DepartmentValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('Project'), ']')]",
+                  "value": "[parameters('ProjectValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('Team'), ']')]",
+                  "value": "[parameters('TeamValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('Environment'), ']')]",
+                  "value": "[parameters('EnvironmentValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                  "value": "[parameters('CreatedOnValue')]"
+                }
+              ]
             }
-        },
+          },
             "parameters": {
                 "Owner": {
                     "type": "String",
@@ -49,6 +115,14 @@
                         "description": "Specifies the Owner of the resource"
                     }
                 },
+                "OwnerValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "OwnerValue",
+                        "description": "Specifies the OwnerValue for the Owner tag"
+                    },
+                    "defaultValue": "Unknown Owner"
+                },
                 "Department": {
                     "type": "String",
                     "metadata": {
@@ -56,12 +130,28 @@
                         "description": "Specifies the Department that the resource belongs to"
                     }
                 },
+                "DepartmentValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "DepartmentValue",
+                        "description": "Specifies the value Department tag"
+                    },
+                    "defaultValue": "Unknown Department"
+                },
                 "Project": {
                     "type": "String",
                     "metadata": {
                         "displayName": "Project",
                         "description": "Specifies the Project that the resource belongs to"
                     }
+                },
+                "ProjectValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "ProjectValue",
+                        "description": "Specifies the value for Project tag"
+                    },
+                    "defaultValue": "Unknown Project"
                 },
                 "Team": {
                     "type": "String",
@@ -71,6 +161,14 @@
                     },
                     "defaultValue": "Unknown"
                 },
+                "TeamValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "TeamValue",
+                        "description": "Specifies the value for the Team tag"
+                    },
+                    "defaultValue": "Unknown Team"
+                },
                 "Environment": {
                     "type": "String",
                     "metadata": {
@@ -79,6 +177,31 @@
                     },
                     "defaultValue": "prod",
                     "allowedValues": ["prod", "dev", "qa", "staging", "other"]
+                },
+                "EnvironmentValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "EnvironmentValue",
+                        "description": "Specifies the value for the Environment tag"
+                    },
+                    "defaultValue": "prod",
+                    "allowedValues": ["prod", "dev", "qa", "staging", "other"]
+                },
+                "CreatedOn": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "CreatedOn",
+                        "description": "Specifies the Created Date/Time for the resource"
+                    },
+                    "defaultValue": "formatDateTime(utcNow(), 'yyyy-MM-ddTHH:mm:ssZ')"
+                },
+                "CreatedOnValue": {
+                    "type": "String",
+                    "metadata": {
+                        "displayName": "CreatedOnValue",
+                        "description": "Specifies the value for the CreatedOn tag"
+                    },
+                    "defaultValue": "formatDateTime(utcNow(), 'yyyy-MM-ddTHH:mm:ssZ')"
                 }
             }
         }
