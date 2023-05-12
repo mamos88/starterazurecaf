@@ -123,6 +123,14 @@
             "description": "Specifies the CreatedBy that the Resource Group belongs to"
           },
           "defaultValue": "Please Specify"
+      },
+      "EnforceResourceTags-CreatedBy": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedBy",
+            "description": "Specifies the CreatedBy that the resource belongs to"
+          },
+          "defaultValue": "Please Specify"
       }
     },
     "policyDefinitions": [
