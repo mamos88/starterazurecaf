@@ -44,10 +44,10 @@
         "Value": "Please Specify"
       },
       "EnforceRGTags-ManagedByTerraform": {
-        "Value": "Please Specify"
+        "Value": false
       },
       "EnforceResourceTags-ManagedByTerraform": {
-        "Value": "Please Specify"
+        "Value": false
       }
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mand-Tags-PSD",

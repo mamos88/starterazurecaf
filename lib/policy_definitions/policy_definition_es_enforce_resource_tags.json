@@ -97,12 +97,12 @@
                     "defaultValue": "Please Specify"
                 },
                 "ManagedByTerraform": {
-                    "type": "String",
+                    "type": "Boolean",
                     "metadata": {
                         "displayName": "ManagedByTerraform",
                         "description": "Specifies the ManagedByTerraform that the resource belongs to"
                     },
-                    "defaultValue": "Please Specify"
+                    "defaultValue": false
                 }
             }
         }
