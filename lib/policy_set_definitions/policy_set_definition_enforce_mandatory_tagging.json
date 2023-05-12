@@ -101,20 +101,20 @@
           "defaultValue": "Please Specify"
       },
       "EnforceResourceTags-ManagedByTerraform": {
-          "type": "String",
+          "type": "Boolean",
           "metadata": {
             "displayName": "ManagedByTerraform",
             "description": "Specifies the ManageByTerraform that the resource belongs to"
           },
-          "defaultValue": "Please Specify"
+          "defaultValue": false
       },
       "EnforceRGTags-ManagedByTerraform": {
-          "type": "String",
+          "type": "Boolean",
           "metadata": {
             "displayName": "ManagedByTerraform",
             "description": "Specifies the ManageByTerraform that the Resource Group belongs to"
           },
-          "defaultValue": "Please Specify"
+          "defaultValue": false
       }
     },
     "policyDefinitions": [
