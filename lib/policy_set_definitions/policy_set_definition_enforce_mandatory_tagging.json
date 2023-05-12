@@ -115,6 +115,38 @@
             "description": "Specifies the ManageByTerraform that the Resource Group belongs to"
           },
           "defaultValue": false
+      },
+      "EnforceRGTags-CreatedBy": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedBy",
+            "description": "Specifies the CreatedBy that the Resource Group belongs to"
+          },
+          "defaultValue": "Please Specify"
+      },
+      "EnforceResourceTags-CreatedBy": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedBy",
+            "description": "Specifies the CreatedBy that the resource belongs to"
+          },
+          "defaultValue": "Please Specify"
+      },
+      "EnforceRGTags-CreatedOn": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedOn",
+            "description": "Specifies the CreatedOn for the Resource Group"
+          },
+          "defaultValue": "Please Specify Created On Date"
+      },
+      "EnforceResourceTags-CreatedOn": {
+          "type": "String",
+          "metadata": {
+            "displayName": "CreatedOn",
+            "description": "Specifies the CreaCreatedOn Date for the resource"
+          },
+          "defaultValue": "Please Specify Created On Date"
       }
     },
     "policyDefinitions": [
@@ -142,6 +174,12 @@
           },
           "ManagedByTerraform": {
             "value": "[parameters('EnforceRGTags-ManagedByTerraform')]"
+          },
+          "CreatedBy": {
+            "value": "[parameters('EnforceRGTags-CreatedBy')]"
+          },
+          "CreatedOn": {
+            "value": "[parameters('EnforceRGTags-CreatedOn')]"
           }
         },
         "groupNames": []
@@ -170,6 +208,12 @@
           },
           "ManagedByTerraform": {
             "value": "[parameters('EnforceResourceTags-ManagedByTerraform')]"
+          },
+          "CreatedBy": {
+            "value": "[parameters('EnforceResourceTags-CreatedBy')]"
+          },
+          "CreatedOn": {
+            "value": "[parameters('EnforceResourceTags-CreatedOn')]"
           }
         },
         "groupNames": []

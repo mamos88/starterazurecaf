@@ -48,6 +48,9 @@
       },
       "EnforceResourceTags-ManagedByTerraform": {
         "Value": false
+      },
+      "EnforceResourceTags-CreatedBy": {
+        "Value": "Please Specify"
       }
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mand-Tags-PSD",
