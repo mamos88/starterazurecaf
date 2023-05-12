@@ -52,6 +52,10 @@
                 {
                     "field": "[concat('tags[', parameters('CreatedBy'), ']')]",
                     "exists": "false"
+                },
+                {
+                    "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                    "exists": "false"
                 }
                 ]
             }
@@ -123,6 +127,14 @@
                     "description": "Specifies the CreatedBy that the resource belongs to"
                 },
                 "defaultValue": "Please Specify"
+            },
+            "CreatedOn": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "CreatedOn",
+                    "description": "Specifies the CreatedOn that the resource belongs to"
+                },
+                "defaultValue": "Please Specify Created On Date"
             }
         }
     }
