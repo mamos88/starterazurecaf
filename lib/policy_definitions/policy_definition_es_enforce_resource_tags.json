@@ -84,49 +84,42 @@
                     "metadata": {
                         "displayName": "Team",
                         "description": "Specifies the Team that the resource belongs to"
-                    },
-                    "defaultValue": "Unknown"
+                    }
                 },
                 "Environment": {
                     "type": "String",
                     "metadata": {
                         "displayName": "Environment",
                         "description": "Specifies the Environment that the resource belongs to"
-                    },
-                    "defaultValue": "prod",
-                    "allowedValues": ["prod", "dev", "qa", "staging", "other"]
+                    }
                 },
                 "OriginalRqCo": {
                     "type": "String",
                     "metadata": {
                         "displayName": "OriginalRqCo",
                         "description": "Specifies the OriginalRqCo that the resource belongs to"
-                    },
-                    "defaultValue": "Please Specify"
+                    }
                 },
                 "ManagedByTerraform": {
-                    "type": "Boolean",
+                    "type": "String",
                     "metadata": {
                         "displayName": "ManagedByTerraform",
                         "description": "Specifies the ManagedByTerraform that the resource belongs to"
-                    },
-                    "defaultValue": false
+                    }
                 },
                 "CreatedBy": {
                     "type": "String",
                     "metadata": {
                         "displayName": "CreatedBy",
                         "description": "Specifies the CreatedBy that the resource belongs to"
-                    },
-                    "defaultValue": "Please Specify"
+                    }
                 },
                 "CreatedOn": {
                     "type": "String",
                     "metadata": {
                         "displayName": "CreatedOn",
                         "description": "Specifies the CreatedOn that the resource belongs to"
-                    },
-                    "defaultValue": "Please Specify Created On Date"
+                    }
                 }
             }
         }

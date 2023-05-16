@@ -32,26 +32,36 @@
         "Value": "Team"
       },
       "EnforceResourceTags-Environment": {
-        "Value": "prod"
+        "Value": "Environment"
       },
       "EnforceRGTags-Environment": {
-        "Value": "prod"
+        "Value": "Environment"
       },
       "EnforceRGTags-OriginalRqCo": {
-        "Value": "Please Specify"
+        "Value": "OriginalRqCo"
       },
       "EnforceResourceTags-OriginalRqCo": {
-        "Value": "Please Specify"
+        "Value": "OriginalRqCo"
       },
       "EnforceRGTags-ManagedByTerraform": {
-        "Value": false
+        "Value": "ManagedByTerraform"
       },
       "EnforceResourceTags-ManagedByTerraform": {
-        "Value": false
+        "Value": "ManagedByTerraform"
       },
       "EnforceResourceTags-CreatedBy": {
-        "Value": "Please Specify"
+        "Value": "CreatedBy"
+      },
+      "EnforceRGTags-CreatedBy": {
+        "Value": "CreatedBy"
+      },
+      "EnforceRGTags-CreatedOn": {
+        "Value": "CreatedOn"
+      },
+      "EnforceResourceTags-CreatedOn": {
+        "Value": "CreatedOn"
       }
+
     },
     "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policySetDefinitions/Enforce-Mand-Tags-PSD",
     "nonComplianceMessages": [
