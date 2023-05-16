@@ -22,39 +22,39 @@
                 {
                 "anyof": [
                 {
-                    "field": "[concat('tags[', parameters('Owner'), ']')]",
+                    "field": "[concat('tags[', parameters('owner'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('Department'), ']')]",
+                    "field": "[concat('tags[', parameters('department'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('Project'), ']')]",
+                    "field": "[concat('tags[', parameters('project'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('Team'), ']')]",
+                    "field": "[concat('tags[', parameters('team'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('Environment'), ']')]",
+                    "field": "[concat('tags[', parameters('environment'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('OriginalRqCo'), ']')]",
+                    "field": "[concat('tags[', parameters('originalrqco'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('ManagedByTerraform'), ']')]",
+                    "field": "[concat('tags[', parameters('managedbyterraform'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('CreatedBy'), ']')]",
+                    "field": "[concat('tags[', parameters('createdby'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                    "field": "[concat('tags[', parameters('createdon'), ']')]",
                     "exists": "false"
                 }
                 ]
@@ -66,66 +66,66 @@
         }
         },
         "parameters": {
-            "Owner": {
+            "owner": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Owner",
+                    "displayName": "owner",
                     "description": "Specifies the Owner of the Resource Group'"
                 }
             },
-            "Department": {
+            "department": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Department",
+                    "displayName": "department",
                     "description": "Specifies the Department that the Resource Group belongs to"
                 }
             },
-            "Project": {
+            "project": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Project",
+                    "displayName": "project",
                     "description": "Specifies the Department that the Resource Group belongs to"
                 }
             },
-            "Team": {
+            "team": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Team",
+                    "displayName": "team",
                     "description": "Specifies the Team that the Resource Group belongs to"
                 }
             },
-            "Environment": {
+            "environment": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Environment",
+                    "displayName": "environment",
                     "description": "Specifies the Environment that the Resource Group belongs to"
                 }
             },
-            "OriginalRqCo": {
+            "originalrqco": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "OriginalRqCo",
+                    "displayName": "originalrqco",
                     "description": "Specifies the OriginalRqCo that the Resource Group belongs to"
                 }
             },
-            "ManagedByTerraform": {
+            "managedbyterraform": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "ManagedByTerraform",
+                    "displayName": "managedbyterraform",
                     "description": "Specifies the ManagedByTerraform that the Resource Group belongs to"
                 }
             },
-            "CreatedBy": {
+            "createdby": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "CreatedBy",
+                    "displayName": "createdby",
                     "description": "Specifies the CreatedBy that the resource belongs to"
                 }
             },
-            "CreatedOn": {
+            "createdon": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "CreatedOn",
+                    "displayName": "createdon",
                     "description": "Specifies the CreatedOn that the resource belongs to"
                 }
             }

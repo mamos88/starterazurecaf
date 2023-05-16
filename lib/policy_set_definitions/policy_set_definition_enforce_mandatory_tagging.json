@@ -12,130 +12,130 @@
       "category": "General"
     },
     "parameters": {
-      "EnforceRGTags-Owner": {
+      "EnforceRGTags-owner": {
           "type": "String",
           "metadata": {
-            "displayName": "Owner",
-            "description": "Specifies the Owner of the Resource Group"
+            "displayName": "owner",
+            "description": "Specifies the owner of the Resource Group"
           }
       },
-      "EnforceRGTags-Department": {
+      "EnforceRGTags-department": {
           "type": "String",
           "metadata": {
-            "displayName": "Department",
-            "description": "Specifies the Department that the Resource Group belongs to"
+            "displayName": "department",
+            "description": "Specifies the department that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-Owner": {
+      "EnforceResourceTags-owner": {
           "type": "String",
           "metadata": {
-            "displayName": "Owner",
-            "description": "Specifies the Owner of the resource"
+            "displayName": "owner",
+            "description": "Specifies the owner of the resource"
           }
       },
-      "EnforceResourceTags-Department": {
+      "EnforceResourceTags-department": {
           "type": "String",
           "metadata": {
-            "displayName": "Department",
-            "description": "Specifies the Department that the resource belongs to"
+            "displayName": "department",
+            "description": "Specifies the department that the resource belongs to"
           }
       },
-      "EnforceResourceTags-Project": {
+      "EnforceResourceTags-project": {
           "type": "String",
           "metadata": {
-            "displayName": "Project",
-            "description": "Specifies the Project that the resource belongs to"
+            "displayName": "project",
+            "description": "Specifies the project that the resource belongs to"
           }
       },
-      "EnforceRGTags-Project": {
+      "EnforceRGTags-project": {
           "type": "String",
           "metadata": {
-            "displayName": "Project",
-            "description": "Specifies the Department that the Resource Group belongs to"
+            "displayName": "project",
+            "description": "Specifies the department that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-Team": {
+      "EnforceResourceTags-team": {
           "type": "String",
           "metadata": {
-            "displayName": "Team",
-            "description": "Specifies the Team that the resource belongs to"
+            "displayName": "team",
+            "description": "Specifies the team that the resource belongs to"
           }
       },
-      "EnforceRGTags-Team": {
+      "EnforceRGTags-team": {
           "type": "String",
           "metadata": {
-            "displayName": "Team",
-            "description": "Specifies the Team that the Resource Group belongs to"
+            "displayName": "team",
+            "description": "Specifies the team that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-Environment": {
+      "EnforceResourceTags-environment": {
           "type": "String",
           "metadata": {
-            "displayName": "Environment",
-            "description": "Specifies the Environment that the resource belongs to"
+            "displayName": "environment",
+            "description": "Specifies the environment that the resource belongs to"
           }
       },
-      "EnforceRGTags-Environment": {
+      "EnforceRGTags-environment": {
           "type": "String",
           "metadata": {
-            "displayName": "Environment",
-            "description": "Specifies the Environment that the Resource Group belongs to"
+            "displayName": "environment",
+            "description": "Specifies the environment that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-OriginalRqCo": {
+      "EnforceResourceTags-originalrqco": {
           "type": "String",
           "metadata": {
-            "displayName": "OriginalRqCo",
-            "description": "Specifies the OriginalRqCo that the resource belongs to"
+            "displayName": "originalrqco",
+            "description": "Specifies the originalrqco that the resource belongs to"
           }
       },
-      "EnforceRGTags-OriginalRqCo": {
+      "EnforceRGTags-originalrqco": {
           "type": "String",
           "metadata": {
-            "displayName": "OriginalRqCo",
-            "description": "Specifies the OriginalRqCo that the Resource Group belongs to"
+            "displayName": "originalrqco",
+            "description": "Specifies the originalrqco that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-ManagedByTerraform": {
+      "EnforceResourceTags-managedbyterraform": {
           "type": "String",
           "metadata": {
-            "displayName": "ManagedByTerraform",
+            "displayName": "managedbyterraform",
             "description": "Specifies the ManageByTerraform that the resource belongs to"
           }
       },
-      "EnforceRGTags-ManagedByTerraform": {
+      "EnforceRGTags-managedbyterraform": {
           "type": "String",
           "metadata": {
-            "displayName": "ManagedByTerraform",
+            "displayName": "managedbyterraform",
             "description": "Specifies the ManageByTerraform that the Resource Group belongs to"
           }
       },
-      "EnforceRGTags-CreatedBy": {
+      "EnforceRGTags-createdby": {
           "type": "String",
           "metadata": {
-            "displayName": "CreatedBy",
-            "description": "Specifies the CreatedBy that the Resource Group belongs to"
+            "displayName": "createdby",
+            "description": "Specifies the createdby that the Resource Group belongs to"
           }
       },
-      "EnforceResourceTags-CreatedBy": {
+      "EnforceResourceTags-createdby": {
           "type": "String",
           "metadata": {
-            "displayName": "CreatedBy",
-            "description": "Specifies the CreatedBy that the resource belongs to"
+            "displayName": "createdby",
+            "description": "Specifies the createdby that the resource belongs to"
           }
       },
-      "EnforceRGTags-CreatedOn": {
+      "EnforceRGTags-createdon": {
           "type": "String",
           "metadata": {
-            "displayName": "CreatedOn",
-            "description": "Specifies the CreatedOn for the Resource Group"
+            "displayName": "createdon",
+            "description": "Specifies the Create Date for the Resource Group"
           }
       },
-      "EnforceResourceTags-CreatedOn": {
+      "EnforceResourceTags-createdon": {
           "type": "String",
           "metadata": {
-            "displayName": "CreatedOn",
-            "description": "Specifies the CreaCreatedOn Date for the resource"
+            "displayName": "createdon",
+            "description": "Specifies the Create Date for the resource"
           }
       }
     },
@@ -144,32 +144,32 @@
         "policyDefinitionReferenceId": "Resource groups must have mandatory tagging applied",
         "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-RG-Tags-PD",
         "parameters": {
-          "Owner": {
-            "value": "[parameters('EnforceRGTags-Owner')]"
+          "owner": {
+            "value": "[parameters('EnforceRGTags-owner')]"
           },
-          "Department": {
-            "value": "[parameters('EnforceRGTags-Department')]"
+          "department": {
+            "value": "[parameters('EnforceRGTags-department')]"
           },
-          "Project": {
-            "value": "[parameters('EnforceRGTags-Project')]"
+          "project": {
+            "value": "[parameters('EnforceRGTags-project')]"
           },
-          "Team": {
-            "value": "[parameters('EnforceRGTags-Team')]"
+          "team": {
+            "value": "[parameters('EnforceRGTags-team')]"
           },
-          "Environment": {
-            "value": "[parameters('EnforceRGTags-Environment')]"
+          "environment": {
+            "value": "[parameters('EnforceRGTags-environment')]"
           },
-          "OriginalRqCo": {
-            "value": "[parameters('EnforceRGTags-OriginalRqCo')]"
+          "originalrqco": {
+            "value": "[parameters('EnforceRGTags-originalrqco')]"
           },
-          "ManagedByTerraform": {
-            "value": "[parameters('EnforceRGTags-ManagedByTerraform')]"
+          "managedbyterraform": {
+            "value": "[parameters('EnforceRGTags-managedbyterraform')]"
           },
-          "CreatedBy": {
-            "value": "[parameters('EnforceRGTags-CreatedBy')]"
+          "createdby": {
+            "value": "[parameters('EnforceRGTags-createdby')]"
           },
-          "CreatedOn": {
-            "value": "[parameters('EnforceRGTags-CreatedOn')]"
+          "createdon": {
+            "value": "[parameters('EnforceRGTags-createdon')]"
           }
         },
         "groupNames": []
@@ -178,32 +178,32 @@
         "policyDefinitionReferenceId": "Resources must have mandatory tagging applied",
         "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-Resource-Tags-PD",
         "parameters": {
-          "Owner": {
-            "value": "[parameters('EnforceResourceTags-Owner')]"
+          "owner": {
+            "value": "[parameters('EnforceResourceTags-owner')]"
           },
-          "Department": {
-            "value": "[parameters('EnforceResourceTags-Department')]"
+          "department": {
+            "value": "[parameters('EnforceResourceTags-department')]"
           },
-          "Project": {
-            "value": "[parameters('EnforceResourceTags-Project')]"
+          "project": {
+            "value": "[parameters('EnforceResourceTags-project')]"
           },
-          "Team": {
-            "value": "[parameters('EnforceResourceTags-Team')]"
+          "team": {
+            "value": "[parameters('EnforceResourceTags-team')]"
           },
-          "Environment": {
-            "value": "[parameters('EnforceResourceTags-Environment')]"
+          "environment": {
+            "value": "[parameters('EnforceResourceTags-environment')]"
           },
-          "OriginalRqCo": {
-            "value": "[parameters('EnforceResourceTags-OriginalRqCo')]"
+          "originalrqco": {
+            "value": "[parameters('EnforceResourceTags-originalrqco')]"
           },
-          "ManagedByTerraform": {
-            "value": "[parameters('EnforceResourceTags-ManagedByTerraform')]"
+          "managedbyterraform": {
+            "value": "[parameters('EnforceResourceTags-managedbyterraform')]"
           },
-          "CreatedBy": {
-            "value": "[parameters('EnforceResourceTags-CreatedBy')]"
+          "createdby": {
+            "value": "[parameters('EnforceResourceTags-createdby')]"
           },
-          "CreatedOn": {
-            "value": "[parameters('EnforceResourceTags-CreatedOn')]"
+          "createdon": {
+            "value": "[parameters('EnforceResourceTags-createdon')]"
           }
         },
         "groupNames": []

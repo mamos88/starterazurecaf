@@ -7,59 +7,59 @@
     "displayName": "Ensure mandatory tagging is applied to both Resources and Resource Groups",
     "notScopes": [],
     "parameters": {
-      "EnforceRGTags-Owner": {
-        "Value": "Owner"
+      "EnforceRGTags-owner": {
+        "Value": "owner"
       },
-      "EnforceResourceTags-Owner": {
-        "Value": "Owner"
+      "EnforceResourceTags-owner": {
+        "Value": "owner"
       },
-      "EnforceResourceTags-Department": {
-        "Value": "Department"
+      "EnforceResourceTags-department": {
+        "Value": "department"
       },
-      "EnforceRGTags-Department": {
-        "Value": "Department"
+      "EnforceRGTags-department": {
+        "Value": "department"
       },
-      "EnforceResourceTags-Project": {
-        "Value": "Project"
+      "EnforceResourceTags-project": {
+        "Value": "project"
       },
-      "EnforceRGTags-Project": {
-        "Value": "Project"
+      "EnforceRGTags-project": {
+        "Value": "project"
       },
-      "EnforceResourceTags-Team": {
-        "Value": "Team"
+      "EnforceResourceTags-team": {
+        "Value": "team"
       },
-      "EnforceRGTags-Team": {
-        "Value": "Team"
+      "EnforceRGTags-team": {
+        "Value": "team"
       },
-      "EnforceResourceTags-Environment": {
-        "Value": "Environment"
+      "EnforceResourceTags-environment": {
+        "Value": "environment"
       },
-      "EnforceRGTags-Environment": {
-        "Value": "Environment"
+      "EnforceRGTags-environment": {
+        "Value": "environment"
       },
-      "EnforceRGTags-OriginalRqCo": {
-        "Value": "OriginalRqCo"
+      "EnforceRGTags-originalrqco": {
+        "Value": "originalrqco"
       },
-      "EnforceResourceTags-OriginalRqCo": {
-        "Value": "OriginalRqCo"
+      "EnforceResourceTags-originalrqco": {
+        "Value": "originalrqco"
       },
-      "EnforceRGTags-ManagedByTerraform": {
-        "Value": "ManagedByTerraform"
+      "EnforceRGTags-managedbyterraform": {
+        "Value": "managedbyterraform"
       },
-      "EnforceResourceTags-ManagedByTerraform": {
-        "Value": "ManagedByTerraform"
+      "EnforceResourceTags-managedbyterraform": {
+        "Value": "managedbyterraform"
       },
-      "EnforceResourceTags-CreatedBy": {
-        "Value": "CreatedBy"
+      "EnforceResourceTags-createdby": {
+        "Value": "createdby"
       },
-      "EnforceRGTags-CreatedBy": {
-        "Value": "CreatedBy"
+      "EnforceRGTags-createdby": {
+        "Value": "createdby"
       },
-      "EnforceRGTags-CreatedOn": {
-        "Value": "CreatedOn"
+      "EnforceRGTags-createdon": {
+        "Value": "createdon"
       },
-      "EnforceResourceTags-CreatedOn": {
-        "Value": "CreatedOn"
+      "EnforceResourceTags-createdon": {
+        "Value": "createdon"
       }
 
     },

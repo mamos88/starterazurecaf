@@ -16,39 +16,39 @@
             "if": {
                 "anyof": [
                     {
-                        "field": "[concat('tags[', parameters('Owner'), ']')]",
+                        "field": "[concat('tags[', parameters('owner'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('Department'), ']')]",
+                        "field": "[concat('tags[', parameters('department'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('Project'), ']')]",
+                        "field": "[concat('tags[', parameters('project'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('Team'), ']')]",
+                        "field": "[concat('tags[', parameters('team'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('Environment'), ']')]",
+                        "field": "[concat('tags[', parameters('environment'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('OriginalRqCo'), ']')]",
+                        "field": "[concat('tags[', parameters('originalrqco'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('ManagedByTerraform'), ']')]",
+                        "field": "[concat('tags[', parameters('managedbyterraform'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('CreatedBy'), ']')]",
+                        "field": "[concat('tags[', parameters('createdby'), ']')]",
                         "exists": "false"
                     },
                     {
-                        "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
+                        "field": "[concat('tags[', parameters('createdon'), ']')]",
                         "exists": "false"
                     }
                     ]
@@ -58,67 +58,67 @@
             }
         },
             "parameters": {
-                "Owner": {
+                "owner": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Owner",
+                        "displayName": "owner",
                         "description": "Specifies the Owner of the resource"
                     }
                 },
-                "Department": {
+                "department": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Department",
+                        "displayName": "department",
                         "description": "Specifies the Department that the resource belongs to"
                     }
                 },
-                "Project": {
+                "project": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Project",
+                        "displayName": "project",
                         "description": "Specifies the Project that the resource belongs to"
                     }
                 },
-                "Team": {
+                "team": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Team",
+                        "displayName": "team",
                         "description": "Specifies the Team that the resource belongs to"
                     }
                 },
-                "Environment": {
+                "environment": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "Environment",
+                        "displayName": "environment",
                         "description": "Specifies the Environment that the resource belongs to"
                     }
                 },
-                "OriginalRqCo": {
+                "originalrqco": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "OriginalRqCo",
-                        "description": "Specifies the OriginalRqCo that the resource belongs to"
+                        "displayName": "originalrqco",
+                        "description": "Specifies the Original Request or Change Order that the resource belongs to"
                     }
                 },
-                "ManagedByTerraform": {
+                "managedbyterraform": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "ManagedByTerraform",
-                        "description": "Specifies the ManagedByTerraform that the resource belongs to"
+                        "displayName": "managedbyterraform",
+                        "description": "Specifies if the resources is managed by Terraform"
                     }
                 },
-                "CreatedBy": {
+                "createdby": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "CreatedBy",
-                        "description": "Specifies the CreatedBy that the resource belongs to"
+                        "displayName": "createdby",
+                        "description": "Specifies who created the resource"
                     }
                 },
-                "CreatedOn": {
+                "createdon": {
                     "type": "String",
                     "metadata": {
-                        "displayName": "CreatedOn",
-                        "description": "Specifies the CreatedOn that the resource belongs to"
+                        "displayName": "createdon",
+                        "description": "Specifies the created on date for the resource"
                     }
                 }
             }
