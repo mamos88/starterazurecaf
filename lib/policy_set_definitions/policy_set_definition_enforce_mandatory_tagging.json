@@ -73,80 +73,70 @@
           "metadata": {
             "displayName": "Environment",
             "description": "Specifies the Environment that the resource belongs to"
-          },
-          "defaultValue": "prod"
+          }
       },
       "EnforceRGTags-Environment": {
           "type": "String",
           "metadata": {
             "displayName": "Environment",
             "description": "Specifies the Environment that the Resource Group belongs to"
-          },
-          "defaultValue": "prod"
+          }
       },
       "EnforceResourceTags-OriginalRqCo": {
           "type": "String",
           "metadata": {
             "displayName": "OriginalRqCo",
             "description": "Specifies the OriginalRqCo that the resource belongs to"
-          },
-          "defaultValue": "Please Specify"
+          }
       },
       "EnforceRGTags-OriginalRqCo": {
           "type": "String",
           "metadata": {
             "displayName": "OriginalRqCo",
             "description": "Specifies the OriginalRqCo that the Resource Group belongs to"
-          },
-          "defaultValue": "Please Specify"
+          }
       },
       "EnforceResourceTags-ManagedByTerraform": {
-          "type": "Boolean",
+          "type": "String",
           "metadata": {
             "displayName": "ManagedByTerraform",
             "description": "Specifies the ManageByTerraform that the resource belongs to"
-          },
-          "defaultValue": false
+          }
       },
       "EnforceRGTags-ManagedByTerraform": {
-          "type": "Boolean",
+          "type": "String",
           "metadata": {
             "displayName": "ManagedByTerraform",
             "description": "Specifies the ManageByTerraform that the Resource Group belongs to"
-          },
-          "defaultValue": false
+          }
       },
       "EnforceRGTags-CreatedBy": {
           "type": "String",
           "metadata": {
             "displayName": "CreatedBy",
             "description": "Specifies the CreatedBy that the Resource Group belongs to"
-          },
-          "defaultValue": "Please Specify"
+          }
       },
       "EnforceResourceTags-CreatedBy": {
           "type": "String",
           "metadata": {
             "displayName": "CreatedBy",
             "description": "Specifies the CreatedBy that the resource belongs to"
-          },
-          "defaultValue": "Please Specify"
+          }
       },
       "EnforceRGTags-CreatedOn": {
           "type": "String",
           "metadata": {
             "displayName": "CreatedOn",
             "description": "Specifies the CreatedOn for the Resource Group"
-          },
-          "defaultValue": "Please Specify Created On Date"
+          }
       },
       "EnforceResourceTags-CreatedOn": {
           "type": "String",
           "metadata": {
             "displayName": "CreatedOn",
             "description": "Specifies the CreaCreatedOn Date for the resource"
-          },
-          "defaultValue": "Please Specify Created On Date"
+          }
       }
     },
     "policyDefinitions": [
