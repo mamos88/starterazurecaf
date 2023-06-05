@@ -3,14 +3,13 @@
     "policy_assignments": [
       "AllowedLocationsResGrps",
       "AllowedLocations",
-      "Enforce-Mand-Tags-PA"
+      "Enforce-Resource-Tags-PA"
+      
     ],
     "policy_definitions": [
-    "Enforce-RG-Tags-PD",
-    "Enforce-Resource-Tags-PD"
+      "Enforce-Resource-Tags-PD"
   ],
     "policy_set_definitions": [
-      "Enforce-Mand-Tags-PSD"
     ],
     "role_definitions": [],
     "archetype_config": {
