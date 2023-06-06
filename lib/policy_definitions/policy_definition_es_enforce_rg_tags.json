@@ -13,20 +13,26 @@
           "category": "Tags"
         },
         "policyRule": {
-        "if": {
-            "allOf":[
+            "if": {
+              "anyof": [
                 {
-                "field": "type",
-                "equals": "Microsoft.Resources/subscriptions/resourceGroups"
-                },
-                {
-                "anyof": [
-                {
-                    "field": "[concat('tags[', parameters('Owner'), ']')]",
-                    "exists": "false"
+                  "field": "[concat('tags[', parameters('Owner'), ']')]",
+                  "exists": "false"
                 },
                 {
                     "field": "[concat('tags[', parameters('Department'), ']')]",
+                    "exists": "false"
+                },
+                {
+                  "field": "[concat('tags[', parameters('Environment'), ']')]",
+                  "notIn": "[parameters('EnvironmentTagValue')]"
+                },
+                {
+                  "field": "[concat('tags[', parameters('ManagedByTerraform'), ']')]",
+                  "notIn": "[parameters('ManagedByTerraformTagValue')]"
+                },
+                {
+                    "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
                     "exists": "false"
                 },
                 {
@@ -34,101 +40,121 @@
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('Team'), ']')]",
-                    "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('Environment'), ']')]",
-                    "exists": "false"
-                },
-                {
                     "field": "[concat('tags[', parameters('OriginalRqCo'), ']')]",
                     "exists": "false"
                 },
                 {
-                    "field": "[concat('tags[', parameters('ManagedByTerraform'), ']')]",
+                    "field": "[concat('tags[', parameters('Team'), ']')]",
                     "exists": "false"
                 },
                 {
                     "field": "[concat('tags[', parameters('CreatedBy'), ']')]",
                     "exists": "false"
-                },
-                {
-                    "field": "[concat('tags[', parameters('CreatedOn'), ']')]",
-                    "exists": "false"
                 }
-                ]
+              ]
+            },
+            "then": {
+    
+              "effect": "deny"
             }
-            ]
-        },
-        "then": {
-            "effect": "deny"
-        }
         },
         "parameters": {
             "Owner": {
-                "type": "String",
-                "metadata": {
-                    "displayName": "Owner",
-                    "description": "Specifies the Owner of the Resource Group'"
-                }
+              "type": "String",
+              "metadata": {
+                "displayName": "Owner",
+                "description": "Specifies the Owner of the resource"
+              },
+              "defaultValue": "Owner"
             },
             "Department": {
-                "type": "String",
-                "metadata": {
-                    "displayName": "Department",
-                    "description": "Specifies the Department that the Resource Group belongs to"
-                }
-            },
-            "Project": {
-                "type": "String",
-                "metadata": {
-                    "displayName": "Project",
-                    "description": "Specifies the Department that the Resource Group belongs to"
-                }
-            },
-            "Team": {
-                "type": "String",
-                "metadata": {
-                    "displayName": "Team",
-                    "description": "Specifies the Team that the Resource Group belongs to"
-                }
+              "type": "String",
+              "metadata": {
+                "displayName": "Department",
+                "description": "Specifies the Department that the resource belongs to"
+              },
+              "defaultValue": "Department"
             },
             "Environment": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "Environment",
-                    "description": "Specifies the Environment that the Resource Group belongs to"
-                }
-            },
-            "OriginalRqCo": {
-                "type": "String",
+                  "displayName": "Environment",
+                  "description": "Specifies the Department that the resource belongs to"
+                },
+                "defaultValue": "Environment"
+              },
+            "EnvironmentTagValue": {
+                "type": "Array",
                 "metadata": {
-                    "displayName": "OriginalRqCo",
-                    "description": "Specifies the OriginalRqCo that the Resource Group belongs to"
-                }
-            },
+                  "displayName": "EnvironmentTagValue",
+                  "description": "Environment Value of the tag, such as 'Production'"
+                },
+                "defaultValue":[
+                    "Production",
+                    "UAT",
+                    "Test",
+                    "Others"
+                ]
+              },
             "ManagedByTerraform": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "ManagedByTerraform",
-                    "description": "Specifies the ManagedByTerraform that the Resource Group belongs to"
-                }
-            },
-            "CreatedBy": {
-                "type": "String",
+                  "displayName": "ManagedByTerraform",
+                  "description": "Specifies if the resource is Managed by Terraform"
+                },
+                "defaultValue": "ManagedByTerraform"
+              },
+            "ManagedByTerraformTagValue": {
+                "type": "Array",
                 "metadata": {
-                    "displayName": "CreatedBy",
-                    "description": "Specifies the CreatedBy that the resource belongs to"
-                }
-            },
+                  "displayName": "ManagedByTerraformTagValue",
+                  "description": "ManagedByTerraformTagValue Value of the tag, such as 'True/False'"
+                },
+                "defaultValue":[
+                    "True",
+                    "False"
+                ]
+              },
             "CreatedOn": {
                 "type": "String",
                 "metadata": {
-                    "displayName": "CreatedOn",
-                    "description": "Specifies the CreatedOn that the resource belongs to"
-                }
-            }
+                  "displayName": "CreatedOn",
+                  "description": "Specifies the Created On date for the resource"
+                },
+                "defaultValue": "CreatedOn"
+                },
+            "Project": {
+                "type": "String",
+                "metadata": {
+                  "displayName": "Project",
+                  "description": "Specifies the Project for the resource"
+                },
+                "defaultValue": "Project"
+              },
+            "OriginalRqCo": {
+                "type": "String",
+                "metadata": {
+                  "displayName": "OriginalRqCo",
+                  "description": "Specifies the OriginalRqCo for the resource"
+                },
+                "defaultValue": "OriginalRqCo"
+              },
+            "Team": {
+                "type": "String",
+                "metadata": {
+                  "displayName": "Team",
+                  "description": "Specifies the Team for the resource"
+                },
+                "defaultValue": "Team"
+              },
+            "CreatedBy": {
+                "type": "String",
+                "metadata": {
+                  "displayName": "CreatedBy",
+                  "description": "Specifies who the resources was Created By"
+                },
+                "defaultValue": "CreatedBy"
+              }
+          }
         }
     }
-}
