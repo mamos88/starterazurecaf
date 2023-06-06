@@ -5,7 +5,9 @@
   "properties": {
       "description": "Enforce Mandatory Tags on Resources",
       "displayName": "Resources must have mandatory tagging applied",
-      "notScopes": [],
+      "notScopes": [
+        "/providers/Microsoft.Management/managementGroups/mg-student", 
+        "/providers/Microsoft.Management/managementGroups/mg-developer"],
       "parameters": {
       } ,
       "policyDefinitionId": "${root_scope_resource_id}/providers/Microsoft.Authorization/policyDefinitions/Enforce-Resource-Tags-PD",

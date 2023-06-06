@@ -3,11 +3,13 @@
     "policy_assignments": [
       "AllowedLocationsResGrps",
       "AllowedLocations",
-      "Enforce-Resource-Tags-PA"
+      "Enforce-Resource-Tags-PA",
+      "Enforce-RG-Tags-PA"
       
     ],
     "policy_definitions": [
-      "Enforce-Resource-Tags-PD"
+      "Enforce-Resource-Tags-PD",
+      "Enforce-RG-Tags-PD"
   ],
     "policy_set_definitions": [
     ],
